@@ -13,6 +13,8 @@ gem 'puma', '~> 5.0'
 
 gem 'importmap-rails'
 
+gem 'rails-i18n', '~> 7.0', '>= 7.0.8'
+
 gem 'turbo-rails'
 
 gem 'stimulus-rails'
