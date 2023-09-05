@@ -27,6 +27,8 @@ gem 'bootsnap', require: false
 
 gem 'devise'
 
+gem 'tty-spinner'
+
 gem 'rubocop'
 gem 'rubocop-performance'
 gem 'rubocop-rails'
