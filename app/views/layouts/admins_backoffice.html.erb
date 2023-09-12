@@ -13,6 +13,9 @@
   <body>
     <h2>Layout admin backoffice</h2>
 
+   
+<%= link_to 'admin', admins_backoffice_admins_index_path, data: { turbo_method: :delete }%>
+
     <%= yield %>
   </body>
 </html>

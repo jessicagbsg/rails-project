@@ -198,3 +198,6 @@ Gemspec/DependencyVersion:
 
 Style/RequireOrder:
   Enabled: true
+
+Style/FrozenStringLiteralComment:
+  Enabled: false

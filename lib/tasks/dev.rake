@@ -1,5 +1,4 @@
 namespace :dev do
-  DEFAULT_PASSWORD = 123_456
   desc 'setup development environment'
   task setup: :environment do
     if Rails.env.development?
@@ -7,22 +6,12 @@ namespace :dev do
       show_spinner('Creating DB...') { `rails db:create` }
       show_spinner('Migrating DB...') { `rails db:migrate` }
       show_spinner('Creating default Admin...') { `rails dev:add_default_admin` }
+      show_spinner('Creating extra Admins...') { `rails dev:add_extra_admins` }
       show_spinner('Creating default User...') { `rails dev:add_default_user` }
+      show_spinner('Creating extra Users...') { `rails dev:add_extra_users` }
     else
       puts "You're not in development mode"
     end
-  end
-
-  desc 'add default admin'
-  task add_default_admin: :environment do
-    Admin.create!(email: 'admin@email.com', password: DEFAULT_PASSWORD,
-                  password_confirmation: DEFAULT_PASSWORD)
-  end
-
-  desc 'add default user'
-  task add_default_user: :environment do
-    User.create!(email: 'user@email.com', password: DEFAULT_PASSWORD,
-                 password_confirmation: DEFAULT_PASSWORD)
   end
 
   private

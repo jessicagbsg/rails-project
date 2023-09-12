@@ -29,6 +29,8 @@ gem 'devise'
 
 gem 'tty-spinner'
 
+gem 'faker'
+
 gem 'rubocop'
 gem 'rubocop-performance'
 gem 'rubocop-rails'
@@ -41,6 +43,7 @@ end
 
 group :development do
   gem 'web-console'
+  gem 'awesome_print'
 end
 
 group :test do
